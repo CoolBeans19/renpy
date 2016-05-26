@@ -1,0 +1,77 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While loading <'Image' 'akira_explosion.jpg'>:
+IOError: Couldn't find file 'akira_explosion.jpg'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in script
+    $ ui.interact()
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/ast.py", line 805, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/python.py", line 1460, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in <module>
+    $ ui.interact()
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/ui.py", line 277, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/core.py", line 2354, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/core.py", line 2691, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/core.py", line 1788, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 394, in renpy.display.render.render_screen (gen/renpy.display.render.c:6190)
+    rv = render(root, width, height, 0, 0)
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/screen.py", line 610, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/layout.py", line 1025, in render
+    back = render(style.background, bw, bh, st, at)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3104)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2721)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/im.py", line 478, in render
+    im = cache.get(self)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/im.py", line 200, in get
+    surf = image.load()
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/im.py", line 529, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/loader.py", line 533, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'akira_explosion.jpg'.
+
+Darwin-14.5.0-x86_64-i386-64bit
+Ren'Py 6.99.7.858
+My Question 0.0

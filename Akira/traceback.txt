@@ -1,0 +1,37 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 332, in script
+    scene bg winscreen with Dissolve(6.0, alpha=False, time_warp=None)
+IOError: Couldn't find file 'iamthenight.ogg'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 332, in script
+    scene bg winscreen with Dissolve(6.0, alpha=False, time_warp=None)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/ast.py", line 1258, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/exports.py", line 1271, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/core.py", line 1928, in do_with
+    clear=clear)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/core.py", line 2354, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/display/core.py", line 2641, in interact_core
+    renpy.audio.audio.interact()
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/audio/audio.py", line 790, in interact
+    periodic()
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/audio/audio.py", line 724, in periodic
+    c.periodic()
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/audio/audio.py", line 340, in periodic
+    topf = load(self.file_prefix + topq.filename + self.file_suffix)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/audio/audio.py", line 74, in load
+    rv = renpy.loader.load(fn)
+  File "/Users/h205p2/Downloads/renpy-6.99.7-sdk/renpy/loader.py", line 533, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'iamthenight.ogg'.
+
+Darwin-14.5.0-x86_64-i386-64bit
+Ren'Py 6.99.7.858
+Akira 0.0
